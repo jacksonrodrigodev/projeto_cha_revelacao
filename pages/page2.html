@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/src/style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1 id="mudarTexto">Mas antes de revelar, qual seu palpite?</h1>
+        <div>
+            <label>
+                Bernardo
+                <input type="radio" value="Bernardo" name="sexo">
+                <i class="fa-solid fa-child"></i>
+            </label>
+            <label>
+                Helena
+                <input type="radio" value="Helena" name="sexo">
+                <i class="fa-solid fa-child-dress"></i>
+            </label>
+        </div>
+        <button type="button" onclick="pegarSexo()" id="button" class="button">Escolher</button>
+    </div>
+    <a href="page3.html" class="espaçoSuperio" id="link" style="display:none;"><span>Resultado</span></a>
+    <script>
+        function pegarSexo(){
+            var choices = []
+            var els = document.getElementsByName('sexo')
+            for (var i=0; i<els.length;i++){
+                if(els[i].checked){
+                    choices.push(els[i].value)
+                }
+            }
+            
+            document.getElementById("mudarTexto").innerHTML = "Será que você acertou, é "+choices+"?"
+            document.getElementById("link").style.display = "block";
+            document.getElementById("button").style.display = "none";
+
+        }
+        
+    </script>
+</body>
+</html>

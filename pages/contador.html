@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <script src="/src/app.js"></script>
+</head>
+<body>
+    <h1>CONTAGEM REGRESSIVA</h1>
+    <div>
+        <h2 id="timer"></h2>
+    </div>
+    <script>
+        window.onload = function () {
+        var duration = 10 * 1; // Converter para segundos
+        display = document.querySelector('#timer'); // selecionando o timer
+        startTimer(duration, display,"page2.html"); // iniciando o timer
+        };
+    </script>
+</body>
+</html>
